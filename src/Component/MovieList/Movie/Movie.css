@@ -1,0 +1,24 @@
+.Container{height:350px;
+width: 260px;
+border: 1px solid black;
+border-radius: 5px;
+}
+.rating-movie{
+    border: 1px solid black;
+    border-radius: 0px 5px 0px 0px;
+
+}
+.MovieImg{
+    height: 260px;
+    width:235px;
+}
+.MovieName{
+    text-align: center;
+    height:60px;
+    width:259px;
+    border-top: 1px  solid black;
+}
+.MovieName Col{
+    display: flex;
+    align-self: center;
+}
