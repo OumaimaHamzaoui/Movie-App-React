@@ -1,6 +1,7 @@
 import React from "react";
 import Movie from "./Movie/Movie";
 import "../MovieList/MovieList.css";
+import WithLoading from "../../HOC/WithLoading";
 
 function MovieList({ movieList, searchTerm, ratingvalue }) {
   let holder;
@@ -24,4 +25,4 @@ function MovieList({ movieList, searchTerm, ratingvalue }) {
   );
 }
 
-export default MovieList;
+export default WithLoading(MovieList);

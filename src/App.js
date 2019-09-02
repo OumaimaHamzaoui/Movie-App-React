@@ -35,7 +35,13 @@ class App extends Component {
       ],
 'searchTerm':"",
 'ratingvalue':"",
+'isLoading':true,
     }
+  }
+  componentDidMount(){
+    setTimeout(() => {
+      this.setState({isLoading:false})
+    }, 3000);
   }
   addNewMovie=newMovie=>{
     this.setState({ MOVIES: [...this.state.MOVIES, newMovie] })
@@ -54,7 +60,7 @@ class App extends Component {
     return (
     <div className="App">
       <Header onChange={this.onChangeHandler} onStarClick={this.onStartClick}/>
-      <MovieList movieList={this.state.MOVIES} searchTerm={this.state.searchTerm} ratingvalue={this.state.ratingvalue} />
+      <MovieList movieList={this.state.MOVIES} searchTerm={this.state.searchTerm} ratingvalue={this.state.ratingvalue} isLoading={this.state.isLoading} />
       <Modal addNewMovie={this.addNewMovie}/>
       
     </div>
